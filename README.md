@@ -1,125 +1,77 @@
-# Engajar para Transformar
+# Conexão Escola
 
-## Tema do Projeto
-
-Conexão Escola: campanha de engajamento escolar com uso de indicadores e plataforma digital.
+Conexão Escola é um projeto de landing page voltado para o ambiente escolar, com foco em engajamento, organização e apresentação de informações de forma visual e intuitiva.
 
 ## Sobre o projeto
 
-Este projeto é um site simples feito com Flask para apresentar a proposta Conexão Escola. A aplicação usa:
+Este projeto foi desenvolvido com HTML, CSS e JavaScript para criar uma interface moderna e responsiva, com seções de apresentação, informações sobre o projeto e dados principais do contexto escolar.
 
-- Python
-- Flask
-- Templates HTML em `templates/`
-- Arquivos estáticos em `static/`
+A ideia é oferecer uma experiência simples, elegante e acessível, que possa ser usada como base para futuras expansões com back-end, autenticação e banco de dados.
 
-Atualmente, a aplicação possui uma rota principal (`/`) que renderiza a página inicial.
+## Funcionalidades
+
+- Página inicial com identidade visual do projeto
+- Navegação entre seções
+- Layout responsivo
+- Estilização com CSS moderno
+- Interatividade com JavaScript
+- Estrutura pronta para publicação no GitHub Pages
 
 ## Estrutura do projeto
 
 ```text
-Projeto_site-main/
-├── app.py
+estudo-de-HTML-e-css-/
+├── index.html
 ├── README.md
 ├── static/
+│   ├── img/
 │   ├── script.js
-│   ├── style.css
-│   └── img/
-└── templates/
-	└── index.html
+│   └── style.css
 ```
 
-## Requisitos
+## Como visualizar localmente
 
-- Python 3.9 ou superior
-- Python com suporte a `pip`
+Você pode abrir o arquivo [index.html](index.html) diretamente no navegador.
 
-## Instalação
-
-Clone ou abra a pasta do projeto e, no terminal, execute:
+Também é possível servir o projeto localmente com um servidor simples, por exemplo:
 
 ```bash
-python3 -m pip install flask
+python -m http.server 8000
 ```
 
-Se estiver no Windows:
-
-```bash
-python -m pip install flask
-```
-
-Esse comando instala o Flask, que é a biblioteca usada para criar e executar o servidor do projeto. Sem ele, o arquivo `app.py` não vai rodar, porque o Python não reconhecerá o import do Flask.
-
-Foi usado `python3 -m pip` em vez de apenas `pip` porque esse formato chama o instalador diretamente pelo Python correto, evitando problemas quando existe mais de uma instalação de Python ou quando o comando `pip` do sistema está apontando para outro programa.
-
-## Como executar
-
-Para iniciar o projeto da forma mais simples, rode:
-
-```bash
-python3 app.py
-```
-
-Esse comando executa diretamente o arquivo principal da aplicação. Ao fazer isso, o Flask sobe um servidor local e disponibiliza o site no navegador.
-
-Use esse comando quando:
-
-- você quiser apenas abrir o projeto localmente de forma simples
-- estiver testando alterações básicas no site
-- quiser seguir exatamente a estrutura atual do projeto
-
-Depois, abra no navegador:
+Depois, acesse:
 
 ```text
-http://127.0.0.1:5000
+http://localhost:8000
 ```
 
-## Modo de desenvolvimento com Flask
+## Como publicar no GitHub Pages
 
-Outra forma de executar é usando o comando do próprio Flask:
+1. Acesse o repositório no GitHub.
+2. Vá até a seção Settings.
+3. Entre em Pages.
+4. Em Source, selecione Deploy from a branch.
+5. Escolha a branch main e a pasta /root.
+6. Salve.
 
-```bash
-export FLASK_APP=app.py
-python3 -m flask run
-```
+Após alguns minutos, o site ficará disponível em uma URL do GitHub Pages.
 
-No Windows:
+## Tecnologias usadas
 
-```bash
-set FLASK_APP=app.py
-python -m flask run
-```
+- HTML5
+- CSS3
+- JavaScript
 
-O comando `export FLASK_APP=app.py` informa ao Flask qual arquivo contém a aplicação. Em seguida, `python3 -m flask run` inicia o servidor com base nesse arquivo usando o Flask instalado no mesmo Python do projeto.
+## Próximos passos
 
-Esse modo é útil quando:
+Este projeto pode evoluir para uma versão com:
 
-- você quer rodar o projeto usando o padrão do Flask
-- futuramente quiser usar mais comandos da ferramenta Flask
-- quiser separar com mais clareza o arquivo da aplicação e a execução do servidor
+- back-end em Python com Flask
+- banco de dados
+- login e cadastro
+- área administrativa
+- integração com dados reais de alunos e notas
 
-Para este projeto escolar, se a ideia for só rodar o site localmente, `python3 app.py` já é suficiente. O `flask run` é uma alternativa, não uma obrigação.
+## Autor
 
-## Objetivo do projeto
-
-O projeto surge da necessidade de promover maior engajamento dos alunos, incentivando o sentimento de pertencimento e responsabilidade.
-
-### Objetivo geral
-
-Desenvolver uma campanha de engajamento escolar baseada em gestão e indicadores, com apoio de uma plataforma digital.
-
-### Objetivos específicos
-
-- Identificar causas da desmotivação
-- Criar estratégias de engajamento
-- Desenvolver indicadores de acompanhamento
-- Aplicar ações no ambiente escolar
-- Avaliar resultados
-
-## Resultados esperados
-
-- Redução de atrasos
-- Maior uso de uniforme
-- Melhoria no comportamento
-- Aumento do engajamento
-- Participação ativa dos alunos
+Projeto desenvolvido para estudo e apresentação do tema Conexão Escola.
