@@ -112,7 +112,7 @@ body {
 
 @media (max-width: 768px) {
     .navbar-brand .brand-text {
-        display: none;
+        display: inline-block;
     }
 
     .navbar-toggle {
