@@ -96,10 +96,6 @@ body {
     transform: translateY(-2px);
 }
 
-.nav-link-logout {
-    color: var(--error);
-}
-
 .navbar-toggle {
     display: none;
     background: transparent;
@@ -155,9 +151,6 @@ body {
     display: flex;
     align-items: center;
 }
-.hr{
-    color: #000000;
-}
 
 .masthead-content {
     display: flex;
@@ -199,12 +192,6 @@ body {
     object-fit: cover;
 }
 
-.user-welcome {
-    margin-top: 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 300;
-}
-
 @media (min-width: 768px) {
     .masthead-branding {
         flex-direction: row;
@@ -228,11 +215,6 @@ body {
     align-items: center;
 }
 
-.nav-link-logout {
-    flex: 1;
-    height: 0.125rem;
-    background-color: var(--secondary);
-}
 .divider-custom-line{
   flex: 1;
   height: 0.125rem;
@@ -503,11 +485,13 @@ body {
     padding: 3rem 0;
     background-color: #003366;
     color: #fff;
+    text-align: center;
 }
 
-.footer h2 {
-    margin: 0;
-    font-size: 1.5rem;
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .copyright {
@@ -550,36 +534,6 @@ body {
     }
 }
 
-.minimize-button:hover {
-  background: rgba(0, 0, 0, 0.15);
-}
-
-.expanded-body {
-  display: grid;
-  place-items: center;
-}
-
-.notas-card.expanded h1 {
-  font-size: 2rem;
-  color: var(--primary);
-  text-transform: none;
-}
-
-/* Footer */
-.footer {
-  padding: 5rem 0;
-  background-color:  #003366;
-  color: #fff;
-  text-align: center;
-}
-
-.copyright {
-  background-color: black;
-  padding: 1rem 0;
-  color: #fff;
-  text-align: center;
-}
-
 /* Responsivo */
 @media (min-width: 992px) {
   .masthead {
@@ -596,7 +550,3 @@ body {
   }
 }
 
-/* Utilitários - Classes em uso */
-.text-center { text-align: center; }
-.text-secondary { color: var(--secondary); }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
