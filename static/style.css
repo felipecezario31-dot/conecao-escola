@@ -41,6 +41,7 @@ body {
     color: var(--secondary);
 }
 
+
 /* Navegação */
 .navbar {
     position: fixed;
@@ -423,6 +424,10 @@ body {
     transform: translateY(-6px);
     box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
     background-color: var(--light);
+}
+
+.classroom-card {
+    margin: 0 auto;
 }
 
 .notas-card img {

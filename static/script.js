@@ -15,13 +15,13 @@ if (toggleButton && navbarMenu) {
 }
 
 // Cards interativos
-const notasGrid = document.querySelector('.notas-grid');
+const notasGrids = document.querySelectorAll('.notas-grid');
 
-if (notasGrid) {
-    // Guarda os cards originais como elementos, não como HTML
+notasGrids.forEach((notasGrid) => {
     const cardsOriginais = Array.from(notasGrid.querySelectorAll('.notas-card'));
 
-    // Cria o card expandido uma vez só
+    if (cardsOriginais.length === 0) return;
+
     const cardExpandido = document.createElement('div');
     cardExpandido.classList.add('notas-card', 'expanded');
     cardExpandido.innerHTML = `
@@ -31,17 +31,15 @@ if (notasGrid) {
         </div>
     `;
 
-    // Botão de fechar — restaura os cards originais
     cardExpandido.querySelector('.minimize-button').addEventListener('click', () => {
         notasGrid.innerHTML = '';
         cardsOriginais.forEach(card => notasGrid.appendChild(card));
     });
 
-    // Clique em cada card — substitui pelo expandido
     cardsOriginais.forEach(card => {
         card.addEventListener('click', () => {
             notasGrid.innerHTML = '';
             notasGrid.appendChild(cardExpandido);
         });
     });
-}
+});
