@@ -97,6 +97,16 @@ body {
     transform: translateY(-2px);
 }
 
+.nav-link-contact {
+    background-color: #ff9800;
+    color: #fff;
+    font-weight: 700;
+}
+
+.nav-link-contact:hover {
+    background-color: #f57c00;
+}
+
 .navbar-toggle {
     display: none;
     background: transparent;
