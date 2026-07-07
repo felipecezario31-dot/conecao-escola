@@ -19,8 +19,9 @@ const notasGrids = document.querySelectorAll('.notas-grid');
 
 notasGrids.forEach((notasGrid) => {
     const cardsOriginais = Array.from(notasGrid.querySelectorAll('.notas-card'));
+    const cardsInterativos = cardsOriginais.filter(card => !card.classList.contains('static-card'));
 
-    if (cardsOriginais.length === 0) return;
+    if (cardsOriginais.length === 0 || cardsInterativos.length === 0) return;
 
     const cardExpandido = document.createElement('div');
     cardExpandido.classList.add('notas-card', 'expanded');
@@ -36,7 +37,7 @@ notasGrids.forEach((notasGrid) => {
         cardsOriginais.forEach(card => notasGrid.appendChild(card));
     });
 
-    cardsOriginais.forEach(card => {
+    cardsInterativos.forEach(card => {
         card.addEventListener('click', () => {
             notasGrid.innerHTML = '';
             notasGrid.appendChild(cardExpandido);

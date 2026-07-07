@@ -231,6 +231,60 @@ body {
 }
 
 /* Seções */
+.rank-section {
+    padding: 5rem 0 2rem;
+    background-color: #fff;
+}
+
+.rank-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.rank-card {
+    background: linear-gradient(135deg, #f8f9fa, #eef4ff);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.rank-card h3 {
+    margin: 0.75rem 0 0.25rem;
+    color: var(--primary);
+}
+
+.rank-card p {
+    margin: 0;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.rank-badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background-color: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.rank-first {
+    transform: translateY(-0.3rem);
+}
+
+.rank-second {
+    transform: translateY(0.3rem);
+}
+
+.rank-third {
+    transform: translateY(0.6rem);
+}
+
 .portfolio {
     padding: 6rem 0;
     background-color: var(--light);
@@ -428,6 +482,14 @@ body {
 
 .classroom-card {
     margin: 0 auto;
+    cursor: default;
+    transition: none;
+}
+
+.classroom-card:hover {
+    transform: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
 }
 
 .notas-card img {
